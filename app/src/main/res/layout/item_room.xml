@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:orientation="vertical">
+
+        <!-- Thông tin phòng -->
+        <TextView
+            android:id="@+id/txtRoomNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phòng: 101"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txtRoomType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loại: Phòng đơn"
+            android:textSize="14sp"
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:id="@+id/txtRoomPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giá: 500000 VNĐ/đêm"
+            android:textSize="14sp"
+            android:textColor="@color/gray" />
+
+        <!-- Trạng thái phòng -->
+        <TextView
+            android:id="@+id/txtRoomStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trống"
+            android:textSize="14sp"
+            android:textColor="@color/green"
+            android:drawableLeft="@drawable/ic_available"
+            android:drawablePadding="8dp" />
+
+        <!-- Hàng chứa 2 nút "Sửa" và "Xóa" -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnEditRoom"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:text="Sửa Phòng"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/white"
+                android:layout_marginRight="8dp"
+                android:onClick="saveOrUpdateRoom"/>
+
+            <Button
+                android:id="@+id/btnDeleteRoom"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:text="Xóa Phòng"
+                android:backgroundTint="@color/red"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
